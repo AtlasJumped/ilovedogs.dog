@@ -72,9 +72,9 @@ legend{font-weight:600;font-size:.95rem;padding:0 6px}
 .receipt tfoot td{font-weight:800;border-bottom:0}
 footer{padding:28px 0 120px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line);margin-top:20px}
 /* entry pop-up */
-.gate{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(20,14,8,.55)}
+.gate{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px 16px 84px;background:rgba(20,14,8,.55)}
 .gate[hidden]{display:none}
-.gate .box{background:var(--surface);color:var(--ink);border-radius:20px;max-width:460px;width:100%;max-height:92vh;overflow:auto;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative}
+.gate .box{background:var(--surface);color:var(--ink);border-radius:20px;max-width:460px;width:100%;max-height:calc(100vh - 100px);overflow:auto;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative}
 .gate .x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;background:transparent;font-size:28px;line-height:1;color:var(--muted);cursor:pointer;border-radius:50%}
 .gate h2{margin-top:4px;padding-right:36px}
 .gate .opts{display:grid;gap:8px;margin:10px 0 12px}
