@@ -109,3 +109,15 @@ table.sz{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numer
 table.sz th,table.sz td{padding:7px 5px;border-bottom:1px solid var(--line);text-align:left}
 .tablewrap{overflow-x:auto}
 .stage .sil{color:var(--ink)}
+/* v4: city meters, video placeholder */
+.cities{display:grid;gap:14px}
+@media (min-width:640px){.cities{grid-template-columns:1fr 1fr}}
+.city-h{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.city-h h3{margin:0}
+.city .st{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-radius:999px;padding:2px 10px;border:1px solid}
+.cbar{margin-top:12px}
+.cbar-h{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.92rem}
+.cbar-h span{color:var(--muted);font-variant-numeric:tabular-nums}
+.cbar .note{margin:2px 0 0;font-size:.82rem}
+.video{aspect-ratio:16/9;border:2px dashed var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:var(--muted);background:var(--bg)}
+.mic{margin:6px 0}

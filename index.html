@@ -8,7 +8,7 @@
 <meta property="og:title" content="ilovedogs.dog | Can I play with your dog?">
 <meta property="og:description" content="Free matching collar and leg-sleeve sets that tell everyone, at a glance, whether a dog is friendly and welcome to approach. Materials and shipping are on us.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="/css/site.css?v=3">
+<link rel="stylesheet" href="/css/site.css?v=4">
 <meta property="og:image" content="https://ilovedogs.dog/img/colour-code.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -17,7 +17,7 @@
 <div class="wrap">
 <nav class="top" aria-label="Main">
   <a class="logo" href="/">ilovedogs<span>.dog</span></a>
-  <div class="links"><a href="/#signals">Colour code</a><a href="/#free-sets">Free sets</a><a href="/donate.html">Donate</a></div>
+  <div class="links"><a href="/#signals">Colour code</a><a href="/#free-sets">Cities</a><a href="/#volunteer">Volunteer</a><a href="/donate.html">Donate</a></div>
 </nav>
 </div>
 
@@ -52,12 +52,12 @@
 <main id="main">
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Matching collar and sleeve sets for dogs</p>
+    <p class="eyebrow">Uniting dogs and humans</p>
     <h1>Can I play with your dog?</h1>
     <p class="vision">Our vision: a world where every dog lover knows, at a glance, whether they can play with a dog or not.</p>
-    <p class="lead">And a world where every owner of a dog that isn't friendly can tell everyone, from across the street, to keep their distance. Every set is <b>100% free</b>: we pay for the materials and the shipping.</p>
+    <p class="lead">And a world where every owner of a dog that isn't friendly can tell everyone, from across the street, to keep their distance. Every set is <b>100% free</b>: a collar and a leg sleeve for your dog, and a matching band for you.</p>
     <div class="btn-row">
-      <a class="btn" href="#free-sets">Get a free set</a>
+      <a class="btn" href="#free-sets">Reserve a free set</a>
       <a class="btn ghost" href="#signals">See the colour code</a>
     </div>
   </div>
@@ -131,7 +131,7 @@
 <section id="product">
   <div class="wrap">
     <h2>What you get: a matching set</h2>
-    <div class="grid two">
+    <div class="grid three">
       <div class="card">
         <h3>A collar</h3>
         <p>Dogs are already used to collars, so this one stays on and seen. Wide enough to spot from a distance.</p>
@@ -140,8 +140,12 @@
         <h3>A leg sleeve</h3>
         <p>A soft, wide sleeve around the front leg, in the same colour, so people can see the signal from the side and from behind.</p>
       </div>
+      <div class="card">
+        <h3>A band for you</h3>
+        <p>A wristband for the owner in the same colour, so people can read the code from your side of the leash too.</p>
+      </div>
     </div>
-    <p>We recommend both for every dog. Two matching pieces are easier to see and harder to miss.</p>
+    <p>We recommend the collar and the sleeve for every dog. Two matching pieces are easier to see and harder to miss, and your band matches them.</p>
     <div class="card" style="margin-top:14px">
       <h3>Why a sleeve and not a band</h3>
       <p>We started out with little bands. Then we worried a dog might scratch one off and choke on it, and we're not willing to risk a single one of our little buddies. So the leg piece is a soft, wide sleeve instead, and it's on us humans to put it on well.</p>
@@ -227,34 +231,24 @@
 
 <section id="free-sets">
   <div class="wrap">
-    <h2>Get a free set</h2>
-    <p>Everything is free: the collar, the sleeve and the shipping. We're covering all materials and shipping for the first <b>$5,000</b> of sets ourselves.</p>
-    <div class="card" style="margin-bottom:14px">
-      <b>The first $5,000</b>
-      <div class="meter" role="img" aria-label="$0 of $5,000 spent so far"><i style="width:0%"></i></div>
-      <p class="note" style="margin:0">$0 of $5,000 spent so far (as of November 26, 2026). We'll update this as sets go out.</p>
-    </div>
-    <form class="card" data-send="ilovedogs.dog: free set request" data-ok="Got it! We'll email you to confirm your size before we make your set.">
+    <h2>Reserve a free set for your city</h2>
+    <p>We don't mail sets one at a time. If one dog wore a green collar and nobody else did, nobody would know what it means, and that owner would give up. So we wait until a whole city is ready, then everyone gets their set on the same day.</p>
+    <p>A city is ready when all three bars are full: enough dog owners have signed up (our goal is <b>1 in 5 dog owners</b>), there's enough money to make every set, and a volunteer team is ready to hand them out. We're aiming for spring 2027, but the meters decide, not a date.</p>
+    <p>We're putting in the first <b>$5,000</b> ourselves: <b>$2,500 for Los Angeles</b> and <b>$2,500 for Washington, DC</b>. Every donation after that goes to more sets, shipping and getting the word out, in the city the donor picks.</p>
+    <div class="cities" id="city-meters" aria-live="polite"><p class="note">Loading the city meters...</p></div>
+    <p class="note" id="city-updated"></p>
+    <p>Not in LA or DC? Reserve anyway and tell us your city. Every city with enough sign-ups gets its own meters.</p>
+    <form class="card" data-send="ilovedogs.dog: set reservation" data-ok="You're on the list! We'll email you when your city's drop day is set, with the place and time." style="margin-top:14px">
       <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
       <div class="row two">
         <div><label for="r-name">Your name</label><input id="r-name" name="name" required autocomplete="name"></div>
         <div><label for="r-email">Email</label><input id="r-email" type="email" name="email" required autocomplete="email"></div>
       </div>
-      <fieldset style="margin-top:12px">
-        <legend>Where should we mail it?</legend>
-        <div class="row">
-          <div><label for="r-a1">Street address</label><input id="r-a1" name="address" required autocomplete="street-address"></div>
-          <div class="row two">
-            <div><label for="r-city">City</label><input id="r-city" name="city" required autocomplete="address-level2"></div>
-            <div><label for="r-state">State or region</label><input id="r-state" name="state" autocomplete="address-level1"></div>
-          </div>
-          <div class="row two">
-            <div><label for="r-zip">ZIP or postal code</label><input id="r-zip" name="postal_code" required autocomplete="postal-code"></div>
-            <div><label for="r-country">Country</label><input id="r-country" name="country" required autocomplete="country-name" value="United States"></div>
-          </div>
-        </div>
-        <p class="note" style="margin-bottom:0">We only use your address to mail your set. We never share it or sell it.</p>
-      </fieldset>
+      <div class="row two" style="margin-top:12px">
+        <div><label for="r-city">City</label>
+          <select id="r-city" name="city" required><option value="">Choose one</option><option>Los Angeles</option><option>Washington, DC</option><option>Another city (tell us below)</option></select></div>
+        <div><label for="r-zip">ZIP code or neighbourhood</label><input id="r-zip" name="area" autocomplete="postal-code"></div>
+      </div>
       <div class="row two" style="margin-top:12px">
         <div><label for="r-dogs">How many dogs?</label>
           <select id="r-dogs" name="dogs"><option>1</option><option>2</option><option>3</option><option>4 or more</option><option>I'm a rescue, shelter or trainer</option></select></div>
@@ -272,9 +266,10 @@
         <div><label for="r-neck">Neck around (if you measured)</label><input id="r-neck" name="neck" placeholder="e.g. 15 in"></div>
         <div><label for="r-leg">Front leg around (if you measured)</label><input id="r-leg" name="leg" placeholder="e.g. 6 in"></div>
       </div>
-      <div style="margin-top:12px"><label for="r-note">Breed, more dogs, anything else?</label><textarea id="r-note" name="note"></textarea></div>
-      <button class="btn" type="submit" style="margin-top:12px">Request my free set</button>
-      <p class="status" role="status" aria-live="polite"></p>
+      <div style="margin-top:12px"><label for="r-note">Your city if it's not listed, breed, more dogs, anything else?</label><textarea id="r-note" name="note"></textarea></div>
+      <p class="note">You pick your set up at your city's drop day, so we don't need your home address.</p>
+      <div class="btn-row"><button class="btn" type="submit">Reserve my free set</button></div>
+      <p class="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -283,12 +278,57 @@
   <div class="wrap">
     <h2>How this will work</h2>
     <ol class="steps-list">
-      <li><b>You ask for a set.</b> Free, with free shipping, while the first $5,000 lasts.</li>
-      <li><b>We confirm the size</b> by email, then make and mail your matching collar and sleeve.</li>
-      <li><b>Your dog wears the colour</b> on every walk.</li>
-      <li><b>People see it and learn it.</b> Every set on the street teaches a few more people what the colours mean.</li>
-      <li><b>You share it.</b> Tell your dog friends, and send them here for their own free set.</li>
+      <li><b>You reserve a set</b> for your city. It's free.</li>
+      <li><b>Your city's meters fill up:</b> dog owners, money and volunteers.</li>
+      <li><b>We make every set</b> for that city and pack each one sealed and labelled with its owner's name.</li>
+      <li><b>We ship one big box</b> to a public spot, like Santa Monica beach for Los Angeles, and you can follow it here.</li>
+      <li><b>Drop day:</b> everyone picks up their set together, and the whole city sees the colours at once.</li>
+      <li><b>Every walk teaches someone.</b> People see the colours, learn the code and pass it on.</li>
     </ol>
+  </div>
+</section>
+
+<section id="drop-day">
+  <div class="wrap">
+    <div class="card">
+      <h2>Drop day</h2>
+      <p>Each drop is a big public event. One box goes to the hand-out spot instead of thousands of separate packages, which keeps the cost per set low. Inside, every set is sealed and labelled so volunteers can find yours fast.</p>
+      <p>We'll post the place and time here, with a live tracker for the box, as soon as a city's meters are full.</p>
+      <div class="card" style="box-shadow:none;margin-top:10px"><b>Box tracker</b><p class="note" style="margin:4px 0 0">No box has shipped yet. Tracking appears here when the first one leaves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="volunteer">
+  <div class="wrap">
+    <h2>Volunteer for a drop day</h2>
+    <p>Every drop needs people to hand out sets, look after the crowd, entertain the dogs and the humans, and set up. Tell us what you'd like to do. You can just talk.</p>
+    <form class="card" data-send="ilovedogs.dog: volunteer" data-ok="Thank you! We'll be in touch when your city's drop day gets close.">
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+      <div class="row two">
+        <div><label for="v-city">City</label><input id="v-city" name="city" required placeholder="e.g. Los Angeles"></div>
+        <div><label for="v-name">Your name (optional)</label><input id="v-name" name="name" autocomplete="name"></div>
+      </div>
+      <fieldset style="margin-top:12px">
+        <legend>What would you like to do?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="roles" value="Hand out sets"> Hand out sets</label>
+          <label><input type="checkbox" name="roles" value="Crowd care"> Crowd care</label>
+          <label><input type="checkbox" name="roles" value="Entertainment"> Entertainment</label>
+          <label><input type="checkbox" name="roles" value="Setup and pack-down"> Setup and pack-down</label>
+          <label><input type="checkbox" name="roles" value="Photos and video"> Photos and video</label>
+        </div>
+      </fieldset>
+      <div style="margin-top:12px">
+        <label for="v-say">Tell us in your own words, and how we can reach you</label>
+        <button class="btn ghost mic" type="button" data-mic="v-say">&#127897; Talk instead of typing</button>
+        <p class="note" id="v-say-st" aria-live="polite"></p>
+        <textarea id="v-say" name="message" required placeholder="What you'd like to do, and any way to reach you: email, phone or social handle."></textarea>
+      </div>
+      <p class="note">Share only the contact details you're happy for us to use. We use them only to plan drop days.</p>
+      <div class="btn-row"><button class="btn" type="submit">Sign me up</button></div>
+      <p class="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -298,7 +338,15 @@
       <h2>Our plan to make it catch on</h2>
       <p>For this to work, society has to see these colours everywhere. Others have tried colour-coded collars and leashes before, and it never caught on. For humanity to get past this problem, one effort has to break through, and we intend for this to be it.</p>
       <p>Our bet is the combination: this site, every set free for everyone, and a plan that covers what usually goes wrong. The goal is one month when it's in the news and everyone gets excited, because from then on every dog lover can see whether they can go play with a dog on the street.</p>
+      <p>That's why we launch city by city, all at once. Thousands of dogs in the same colours on the same day is news. One dog alone isn't.</p>
     </div>
+  </div>
+</section>
+
+<section id="vision">
+  <div class="wrap">
+    <h2>The vision</h2>
+    <div class="video" role="img" aria-label="Video coming soon">Video coming soon: the founder on why this matters, and watching the city meters climb until the first box ships.</div>
   </div>
 </section>
 
@@ -309,13 +357,13 @@
     <div class="grid two">
       <div class="card">
         <h3>1. Share it</h3>
-        <p>Send this site to your dog friends and encourage them to get their own free set. Sharing the <a href="/donate.html">donate page</a> helps too.</p>
+        <p>Send this site to your dog friends and encourage them to get their own free set. Sharing the <a href="/donate.html">donate page</a> helps too, and donors can choose the city their money goes to.</p>
         <div class="btn-row"><button class="btn" type="button" id="share-btn">Share this site</button></div>
         <p class="status" id="share-st" role="status" aria-live="polite"></p>
       </div>
       <div class="card">
         <h3>2. Point us to your community</h3>
-        <p>If you're part of a dog park group, rescue, club or online community that would love this, tell us. When the first $5,000 is gone, we'll plan a second wave, and we want to know where to start.</p>
+        <p>If you're part of a dog park group, rescue, club or online community that would love this, tell us. It helps us choose the next cities and find drop-day volunteers.</p>
       </div>
     </div>
     <form class="card" style="margin-top:14px" data-send="ilovedogs.dog: community lead" data-ok="Thank you! We've saved it for the next wave.">
@@ -355,11 +403,12 @@
 </section>
 </main>
 <script src="/js/sizer.js?v=1"></script>
+<script src="/js/cities.js?v=1"></script>
 
 <footer>
   <div class="wrap">
     <p><b>ilovedogs.dog</b> is run by a very small team who wants to do good things for humanity. No ads, ever.</p>
-    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Free sets</a> · <a href="/donate.html">Donate</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://hmrfamily.life/">Our other sites</a></p>
+    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Cities</a> · <a href="/#volunteer">Volunteer</a> · <a href="/donate.html">Donate</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://hmrfamily.life/">Our other sites</a></p>
     <p data-hmr-tier-ribbon>Part of the <a href="https://hmrfamily.life/">HMR family</a> of websites. Always 100% free.</p>
   </div>
 </footer>
