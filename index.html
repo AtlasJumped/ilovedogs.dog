@@ -3,50 +3,171 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HMR family site</title>
-<link rel="stylesheet" href="https://hmrfamily.life/x/style.css">
+<title>ilovedogs.dog | Can I play with your dog?</title>
+<meta name="description" content="Free colour-coded bands that tell everyone, at a glance, whether a dog is friendly and welcome to approach. Free except shipping.">
+<meta property="og:title" content="ilovedogs.dog | Can I play with your dog?">
+<meta property="og:description" content="Free colour-coded bands that tell everyone, at a glance, whether a dog is friendly and welcome to approach. Free except shipping.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/css/site.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<nav class="top" aria-label="Main">
+  <a class="logo" href="/">ilovedogs<span>.dog</span></a>
+  <div class="links"><a href="/#signals">The signals</a><a href="/#free-bands">Free bands</a><a href="/donate.html">Donate</a></div>
+</nav>
+</div>
+
+<div class="gate" id="gate" hidden role="dialog" aria-modal="true" aria-labelledby="gate-h">
+  <div class="box">
+    <button class="x" type="button" data-close aria-label="Close">&times;</button>
+    <p class="eyebrow">Welcome to ilovedogs.dog</p>
+    <h2 id="gate-h">Before you come in, tell us a little about you</h2>
+    <p class="note">Everything here is optional. It helps us build this for the people who actually use it. Then we will show you who we are.</p>
+    <form>
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+      <fieldset class="opts">
+        <legend>Which fits you best?</legend>
+        <label><input type="radio" name="who" value="I have a dog"> I have a dog</label>
+        <label><input type="radio" name="who" value="I love dogs but don't have one right now"> I love dogs but don't have one right now</label>
+        <label><input type="radio" name="who" value="I work with dogs (rescue, shelter, trainer, walker, vet)"> I work with dogs (rescue, shelter, trainer, walker, vet)</label>
+        <label><input type="radio" name="who" value="Just curious"> Just curious</label>
+      </fieldset>
+      <div class="row two" style="margin-bottom:12px">
+        <div><label for="g-name">Your first name</label><input id="g-name" name="name" autocomplete="given-name"></div>
+        <div><label for="g-dog">Your dog's name</label><input id="g-dog" name="dog_name"></div>
+      </div>
+      <label for="g-email">Email, only if you want to hear when bands ship</label>
+      <input id="g-email" type="email" name="email" autocomplete="email">
+      <div class="btn-row" style="margin-top:14px">
+        <button class="btn" type="submit">Continue</button>
+        <button class="btn ghost" type="button" data-close>Just look around</button>
+      </div>
+    </form>
+  </div>
+</div>
+<main id="main">
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow" id="f-d"></p>
-    <h1 id="f-t">Loading</h1>
-    <p class="lead" id="f-p"></p>
-    <p><span class="tag">Idea stage: help us shape it</span></p>
+    <p class="eyebrow">Mood bands for dogs</p>
+    <h1>Can I play with your dog?</h1>
+    <p class="vision">Our vision: a world where every dog lover knows, at a glance, whether they can play with a dog or not.</p>
+    <p class="lead">And a world where every owner of a dog that isn't friendly can tell everyone, from across the street, to keep their distance. If we all used the same simple signal, walks would be safer and happier for dogs and people.</p>
+    <div class="btn-row">
+      <a class="btn" href="#free-bands">Get free bands</a>
+      <a class="btn ghost" href="#signals">See the signals</a>
+    </div>
   </div>
 </header>
-<main id="main">
-  <section class="wrap">
-    <div class="idea">
-      <h2>What this could be</h2>
-      <p id="f-sub"></p><ul id="f-b"></ul>
-    </div>
-    <div class="idea">
-      <h2>Help us build it</h2>
-      <p>This site is a starting point. What happens next depends on you. Use the buttons along the bottom of the page, or select any text to send us a note about it.</p>
-      <div class="steps">
-        <div><b>Design</b><br>Change how this page looks, then tell us what you like.</div>
-        <div><b>Speak here</b><br>Say your idea out loud. It turns into text and comes straight to us.</div>
-        <div><b>React</b><br>Pick a feeling and point at the part of the page that caused it.</div>
-        <div><b>Want to build this?</b><br>If you want to build this idea with us, or own it, tell us.</div>
+
+<section id="signals">
+  <div class="wrap">
+    <h2>The signals</h2>
+    <p>One band on your dog answers the two questions every dog lover has: <b>is this dog friendly?</b> and <b>is it OK to come say hi and play?</b> We use traffic-light colours because almost everyone already knows them.</p>
+    <div class="grid three">
+      <div class="signal g">
+        <div class="band" aria-hidden="true"></div>
+        <h3>Green: come say hi</h3>
+        <p class="q">Friendly? Yes. Approach and play? Yes.</p>
+        <p>This dog loves people and other dogs. Ask the owner, then enjoy.</p>
+      </div>
+      <div class="signal y">
+        <div class="band" aria-hidden="true"></div>
+        <h3>Yellow: ask first, give space</h3>
+        <p class="q">Friendly? Usually. Approach and play? Not right now.</p>
+        <p>Nervous, in training, healing or working. Please don't approach without asking.</p>
+      </div>
+      <div class="signal r">
+        <div class="band" aria-hidden="true"></div>
+        <h3>Red: keep your distance</h3>
+        <p class="q">Friendly? No. Approach and play? No.</p>
+        <p>Please give this dog and its person plenty of room. Thank you.</p>
       </div>
     </div>
-    <div class="idea">
-      <h2>Who we are</h2>
-      <p><span class="f-d2"></span> is part of the <a href="https://hmrfamily.life/#experiment">HMR experiment</a>: a test bed of websites started by one person working with AI. The <a href="https://hmrfamily.life/">HMR family</a> sites are always free, forever. Experiment sites are ideas we are testing in the open. We will never ask you for money. If you want to support an idea, or want to buy something we make here, you are welcome to offer, and we will listen.</p>
+    <p class="note">These are guides, not guarantees. Always ask the owner before you touch any dog.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="card">
+      <h2>Our solution: very simple, very cheap bands</h2>
+      <ul class="clean">
+        <li><b>Bands</b> that go around your dog's leg, made to any size, from tiny pups to giant breeds.</li>
+        <li><b>Collars</b> in the same colours, for dogs who wear one every day.</li>
+        <li><b>Easy to see</b> from a distance, so people know before they get close.</li>
+        <li><b>Easy to swap</b> as your dog changes, from a nervous rescue to a happy green.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="free-bands">
+  <div class="wrap">
+    <h2>Free bands for anyone who wants them</h2>
+    <p>We have decided to make a batch of bands and send them to anyone who wants to try them. They are <b>free</b>. You only pay shipping, and we will email you the exact cost and how to pay it before anything is sent. This site never takes payment for bands.</p>
+    <form class="card" data-send="ilovedogs.dog: band request" data-ok="Got it! We'll email you about shipping before anything is sent.">
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+      <div class="row two">
+        <div><label for="r-name">Your name</label><input id="r-name" name="name" required autocomplete="name"></div>
+        <div><label for="r-email">Email</label><input id="r-email" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <div class="row two" style="margin-top:12px">
+        <div><label for="r-where">City and country</label><input id="r-where" name="city_country" required autocomplete="address-level2"></div>
+        <div><label for="r-dogs">How many dogs?</label>
+          <select id="r-dogs" name="dogs"><option>1</option><option>2</option><option>3</option><option>4 or more</option><option>I'm a rescue, shelter or trainer</option></select></div>
+      </div>
+      <fieldset style="margin-top:12px">
+        <legend>Which colours?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="colours" value="Green"> Green</label>
+          <label><input type="checkbox" name="colours" value="Yellow"> Yellow</label>
+          <label><input type="checkbox" name="colours" value="Red"> Red</label>
+          <label><input type="checkbox" name="colours" value="Not sure, send a set"> Not sure, send a set</label>
+        </div>
+      </fieldset>
+      <fieldset style="margin-top:12px">
+        <legend>What would you like?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="items" value="Leg bands"> Leg bands</label>
+          <label><input type="checkbox" name="items" value="Collar"> Collar</label>
+        </div>
+      </fieldset>
+      <div style="margin-top:12px"><label for="r-size">Dog size or breed (and leg or neck size if you know it)</label><input id="r-size" name="size" placeholder="e.g. Labrador, about 60 lb"></div>
+      <div style="margin-top:12px"><label for="r-note">Anything else?</label><textarea id="r-note" name="note"></textarea></div>
+      <p class="note">We only use this to send your bands and tell you when they ship. We'll ask for a shipping address by email when your bands are ready.</p>
+      <button class="btn" type="submit">Request free bands</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="grid two">
+      <div class="card">
+        <h2>Who we are</h2>
+        <p>We're a very small team of dog lovers. Everyone on the team works a full-time job, and we fund this ourselves. We think a shared signal for dogs is a small change that would make life better for a lot of dogs and people.</p>
+        <p><a href="/donate.html">How you can help keep it free</a></p>
+      </div>
+      <div class="card" id="partners">
+        <h2>Partners</h2>
+        <p>We'd love to work with rescues, leash makers, trainers and dog parks who want to help spread the signal.</p>
+        <p><a href="#" data-open-gate>Say hello</a> and tell us who you are.</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
+
 <footer>
   <div class="wrap">
-    <p><a class="btn" href="https://hmrfamily.life/">See all our sites</a></p>
-    
+    <p><b>ilovedogs.dog</b> is run by a very small team who wants to do good things for humanity. No ads, ever.</p>
+    <p><a href="/">Home</a> · <a href="/#signals">The signals</a> · <a href="/#free-bands">Free bands</a> · <a href="/donate.html">Donate</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://hmrfamily.life/">Our other sites</a></p>
   </div>
 </footer>
-<div id="picker"></div>
-<script src="https://hmrfamily.life/x/site.js"></script>
-<script src="https://hmrfamily.life/x/app.js"></script>
-<script src="https://hmrfamily.life/x/hmr-dock.js?v=6.3.1" data-tier="experiment" data-design=".pk-open" data-design-panel=".pk-panel" defer></script>
+<script src="/js/site.js?v=1"></script>
+<script src="https://hmrfamily.life/x/hmr-dock.js?v=6.6.1" data-site="ilovedogs.dog" data-tier="experiment" defer></script>
 </body>
 </html>
