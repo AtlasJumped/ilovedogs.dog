@@ -9,13 +9,15 @@
 <meta property="og:description" content="Free matching collar and leg-sleeve sets that tell everyone, at a glance, whether a dog is friendly and welcome to approach. Materials and shipping are on us.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/css/site.css?v=3">
+<meta property="og:image" content="https://ilovedogs.dog/img/colour-code.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <nav class="top" aria-label="Main">
   <a class="logo" href="/">ilovedogs<span>.dog</span></a>
-  <div class="links"><a href="/#signals">The signals</a><a href="/#free-sets">Free sets</a><a href="/donate.html">Donate</a></div>
+  <div class="links"><a href="/#signals">Colour code</a><a href="/#free-sets">Free sets</a><a href="/donate.html">Donate</a></div>
 </nav>
 </div>
 
@@ -56,7 +58,7 @@
     <p class="lead">And a world where every owner of a dog that isn't friendly can tell everyone, from across the street, to keep their distance. Every set is <b>100% free</b>: we pay for the materials and the shipping.</p>
     <div class="btn-row">
       <a class="btn" href="#free-sets">Get a free set</a>
-      <a class="btn ghost" href="#signals">See the signals</a>
+      <a class="btn ghost" href="#signals">See the colour code</a>
     </div>
   </div>
 </header>
@@ -71,31 +73,58 @@
   </div>
 </section>
 
+<section id="movement">
+  <div class="wrap">
+    <div class="card">
+      <p class="eyebrow">The movement</p>
+      <h2>This isn't about a brand. It's about a code everyone knows.</h2>
+      <p>We don't need everyone to buy our collars, or to donate forever. We want to drop a bomb of positivity on how people and dogs meet: one simple colour code that every dog lover understands.</p>
+      <p>It takes two halves to work. Owners give the signal, and everyone around them has to know what it means. So the message matters as much as the collar.</p>
+      <ol class="steps-list">
+        <li><b>Unaware:</b> today, most people have never heard of a colour code for dogs.</li>
+        <li><b>Aware:</b> people see the colours, and they know how to act.</li>
+        <li><b>Adopted:</b> owners think, "I just need a red collar from any brand, and people will give us space."</li>
+      </ol>
+      <p style="margin-top:14px">It won't be perfect. Some owners of friendly dogs will love a red collar, and some owners of unfriendly dogs will buy green. That's why it's a guide, and you still ask first. What we gain is bigger: everybody who loves dogs knows how to act and share their love properly.</p>
+    </div>
+  </div>
+</section>
+
 <section id="signals">
   <div class="wrap">
-    <h2>The signals</h2>
-    <p>Each set answers the two questions every dog lover has: <b>is this dog friendly?</b> and <b>is it OK to come say hi and play?</b> We use traffic-light colours because almost everyone already knows them.</p>
+    <h2>The colour code</h2>
+    <p>One standard, the same for every brand and every dog. When you share it, please share it in exactly these words, so the message stays the same everywhere it goes.</p>
     <div class="grid three">
       <div class="signal g">
         <div class="band" aria-hidden="true"></div>
         <h3>Green: come say hi</h3>
-        <p class="q">Friendly? Yes. Approach and play? Yes.</p>
-        <p>This dog loves people and other dogs. Ask the owner, then enjoy.</p>
+        <p class="q">Friendly with people and with dogs.</p>
+        <p>This dog is approachable. Say hello to the owner, then enjoy.</p>
       </div>
       <div class="signal y">
         <div class="band" aria-hidden="true"></div>
-        <h3>Yellow: ask first, give space</h3>
-        <p class="q">Friendly? Usually. Approach and play? Not right now.</p>
-        <p>Nervous, in training, healing or working. Please don't approach without asking.</p>
+        <h3>Yellow: ask first</h3>
+        <p class="q">Maybe not good with dogs, but loves people.</p>
+        <p>Always ask before you come closer, and keep your own dog back until the owner says yes.</p>
       </div>
       <div class="signal r">
         <div class="band" aria-hidden="true"></div>
-        <h3>Red: keep your distance</h3>
-        <p class="q">Friendly? No. Approach and play? No.</p>
-        <p>Please give this dog and its person plenty of room. Thank you.</p>
+        <h3>Red: keep away</h3>
+        <p class="q">People and other dogs, please keep away.</p>
+        <p>Give this dog and its person plenty of room, and keep your dog away too. Thank you.</p>
       </div>
     </div>
     <p class="note">These are guides, not guarantees. Always ask the owner before you touch any dog.</p>
+    <div class="card" style="margin-top:14px">
+      <h3>Share the colour code</h3>
+      <p>Post this card anywhere: your feed, your dog park's board, your vet's waiting room.</p>
+      <img src="/img/colour-code.png" width="1080" height="1350" loading="lazy" alt="The dog collar colour code. Green: come say hi, friendly with people and dogs. Yellow: ask first, may not be good with dogs but loves people. Red: keep away, people and other dogs please give space. Any brand, any collar, same colours. ilovedogs.dog" style="width:100%;max-width:420px;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:6px 0 12px">
+      <div class="btn-row">
+        <a class="btn" href="/img/colour-code.png" download="dog-collar-colour-code.png">Download the card</a>
+        <button class="btn ghost" type="button" id="share-btn2">Share the code</button>
+      </div>
+      <p class="status" id="share-st2" aria-live="polite"></p>
+    </div>
   </div>
 </section>
 
@@ -330,11 +359,11 @@
 <footer>
   <div class="wrap">
     <p><b>ilovedogs.dog</b> is run by a very small team who wants to do good things for humanity. No ads, ever.</p>
-    <p><a href="/">Home</a> · <a href="/#signals">The signals</a> · <a href="/#free-sets">Free sets</a> · <a href="/donate.html">Donate</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://hmrfamily.life/">Our other sites</a></p>
+    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Free sets</a> · <a href="/donate.html">Donate</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://hmrfamily.life/">Our other sites</a></p>
     <p data-hmr-tier-ribbon>Part of the <a href="https://hmrfamily.life/">HMR family</a> of websites. Always 100% free.</p>
   </div>
 </footer>
-<script src="/js/site.js?v=2"></script>
+<script src="/js/site.js?v=3"></script>
 <script src="https://hmrfamily.life/x/hmr-dock.js?v=6.6.1" data-site="ilovedogs.dog" data-tier="experiment" defer></script>
 </body>
 </html>

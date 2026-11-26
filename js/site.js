@@ -94,3 +94,23 @@
     else if (st) st.textContent = data.url;
   });
 })();
+(function () {
+  var b = document.getElementById('share-btn2'), st = document.getElementById('share-st2'); if (!b) return;
+  var text = 'The dog collar colour code. Green: come say hi, friendly with people and dogs. Yellow: ask first, maybe not good with dogs but loves people. Red: keep away, people and other dogs. Any brand, any collar, same colours.';
+  var url = 'https://ilovedogs.dog/#signals';
+  function say(m) { if (st) { st.className = 'status ok'; st.textContent = m; } }
+  b.addEventListener('click', function () {
+    var plain = { title: 'The dog collar colour code', text: text, url: url };
+    if (navigator.share && window.fetch && window.File) {
+      fetch('/img/colour-code.png').then(function (r) { return r.blob(); }).then(function (blob) {
+        var f = new File([blob], 'dog-collar-colour-code.png', { type: 'image/png' });
+        var withImg = { title: plain.title, text: text + ' ' + url, files: [f] };
+        if (navigator.canShare && navigator.canShare(withImg)) return navigator.share(withImg);
+        return navigator.share(plain);
+      }).catch(function () { });
+      return;
+    }
+    if (navigator.clipboard) navigator.clipboard.writeText(text + ' ' + url).then(function () { say('Copied. Paste it anywhere, and add the card if you can.'); }, function () { say(text + ' ' + url); });
+    else say(text + ' ' + url);
+  });
+})();
