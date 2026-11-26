@@ -1,4 +1,5 @@
-/* City meters: three bars per city (owners, money, volunteers). Data in /data/cities.json. */
+/* City meters: three bars per city (owners, money, volunteers). Goals, notes and money are in /data/cities.json.
+   Owners and volunteers add the live counts from the HMR Family database (dog_counts(), see js/site.js). */
 (function () {
   var box = document.getElementById('city-meters'); if (!box || !window.fetch) return;
   function n(x) { return Number(x).toLocaleString('en-US'); }
@@ -9,7 +10,11 @@
       '<div class="meter" role="img" aria-label="' + label + ': ' + fmt(have) + ' of ' + fmt(goal) + '"><i style="width:' + Math.max(p, p > 0 ? 1 : 0) + '%"></i></div>' +
       (note ? '<p class="note">' + note + '</p>' : '') + '</div>';
   }
-  fetch('/data/cities.json?v=' + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
+  var DB = 'https://tudawxduevejltgmyrqm.supabase.co/rest/v1/rpc/dog_counts', DBKEY = 'sb_publishable_B1u0-Wf5UbWPX6QstfVbGQ_VpmEDpkn';
+  function live() { return fetch(DB, { method: 'POST', headers: { 'apikey': DBKEY, 'Content-Type': 'application/json' }, body: '{}' }).then(function (r) { return r.ok ? r.json() : null; }, function () { return null; }); }
+  function load() { Promise.all([fetch('/data/cities.json?v=' + Date.now()).then(function (r) { return r.json(); }), live()]).then(function (res) {
+    var d = res[0], L = {}, ok = Array.isArray(res[1]); if (ok) res[1].forEach(function (x) { L[x.city] = x; });
+    d.cities.forEach(function (c) { var x = L[c.id]; if (x) { c.owners += +x.owners || 0; c.volunteers += +x.volunteers || 0; } });
     var html = '';
     d.cities.forEach(function (c) {
       var ready = c.owners >= c.owners_goal && c.money >= c.money_goal && c.volunteers >= c.volunteers_goal;
@@ -20,8 +25,9 @@
         bar('Volunteers ready', c.volunteers, c.volunteers_goal, n, 'Hand-out, crowd care, entertainment and setup.') + '</div>';
     });
     box.innerHTML = html;
-    var u = document.getElementById('city-updated'); if (u) u.textContent = 'Updated ' + d.updated + '.';
-  }).catch(function () { });
+    var u = document.getElementById('city-updated'); if (u) u.textContent = ok ? 'Sign-ups and volunteers count live. Money updated ' + d.updated + '.' : 'Updated ' + d.updated + '.';
+  }).catch(function () { }); }
+  load(); window.addEventListener('ild-counts', load);
 })();
 /* Voice sign-up: speak into a text box where the browser supports it. */
 (function () {

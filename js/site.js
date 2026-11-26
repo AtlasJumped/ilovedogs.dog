@@ -13,7 +13,24 @@
       method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(body)
     }).then(function (r) { return r.ok; }, function () { return false; });
   }
-  window.ILD = { send: send };
+  /* City meters count reservations and volunteers in the HMR Family database (Supabase). The publishable key is meant
+     to be public; the table has row level security with no read access, so emails can't be read back through the site.
+     Only dog_signup() (add one) and dog_counts() (totals) are open. */
+  var DB = 'https://tudawxduevejltgmyrqm.supabase.co/rest/v1/rpc/', DBKEY = 'sb_publishable_B1u0-Wf5UbWPX6QstfVbGQ_VpmEDpkn';
+  function rpc(fn, args) {
+    return fetch(DB + fn, { method: 'POST', headers: { 'apikey': DBKEY, 'Content-Type': 'application/json' }, body: JSON.stringify(args || {}) })
+      .then(function (r) { return r.ok ? r.json() : null; }, function () { return null; });
+  }
+  function cityId(v) { v = String(v || '').toLowerCase(); if (/los angeles|^\s*l\.?a\.?\s*$|santa monica/.test(v)) return 'la'; if (/washington|\bd\.?c\.?\b/.test(v)) return 'dc'; return 'other'; }
+  function deviceKey() { var k = get('ild-dev'); if (!k) { k = 'device-' + Math.random().toString(36).slice(2, 12) + Date.now().toString(36) + '@device.ilovedogs.dog'; set('ild-dev', k); } return k; }
+  function count(form) {
+    var kind = /reservation/.test(form.getAttribute('data-send') || '') ? 'owner' : /volunteer/.test(form.getAttribute('data-send') || '') ? 'volunteer' : '';
+    if (!kind) return;
+    var em = form.elements.email && form.elements.email.value.trim(), dogs = form.elements.dogs ? parseInt(form.elements.dogs.value, 10) || 1 : 1;
+    rpc('dog_signup', { p_kind: kind, p_city: cityId(form.elements.city && form.elements.city.value), p_email: em || deviceKey(), p_dogs: dogs })
+      .then(function () { try { window.dispatchEvent(new Event('ild-counts')); } catch (e) { } });
+  }
+  window.ILD = { send: send, rpc: rpc };
 
   function formData(form) {
     var out = {}, els = form.elements;
@@ -74,6 +91,7 @@
       if (form.botcheck && form.botcheck.checked) return;
       if (!form.checkValidity()) { form.reportValidity(); return; }
       if (btn) btn.disabled = true;
+      count(form);
       if (st) { st.className = 'status'; st.textContent = 'Sending...'; }
       send(form.getAttribute('data-send'), formData(form)).then(function (ok) {
         if (btn) btn.disabled = false;
