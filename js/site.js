@@ -84,3 +84,13 @@
     });
   })(forms[j]);
 })();
+(function () {
+  var b = document.getElementById('share-btn'), st = document.getElementById('share-st'); if (!b) return;
+  var data = { title: 'ilovedogs.dog', text: 'Free matching collar and sleeve sets that tell everyone if a dog is friendly. Get one for your dog:', url: 'https://ilovedogs.dog/' };
+  b.addEventListener('click', function () {
+    if (navigator.share) { navigator.share(data).catch(function () { }); return; }
+    var done = function () { if (st) { st.className = 'status ok'; st.textContent = 'Link copied. Paste it anywhere.'; } };
+    if (navigator.clipboard) navigator.clipboard.writeText(data.url).then(done, function () { if (st) st.textContent = data.url; });
+    else if (st) st.textContent = data.url;
+  });
+})();
