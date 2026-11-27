@@ -234,8 +234,7 @@
   <div class="wrap">
     <h2>Reserve a free set for your city</h2>
     <p>We don't mail sets one at a time. If one dog wore a green collar and nobody else did, nobody would know what it means, and that owner would give up. So we wait until a whole city is ready, then everyone gets their set on the same day.</p>
-    <p>A city is ready when all three bars are full: enough dog owners have signed up (our goal is <b>1 in 5 dog owners</b>), there's enough money to make every set, and a volunteer team is ready to hand them out. We're aiming for spring 2027, but the meters decide, not a date.</p>
-    <p>We're putting in the first <b>$5,000</b> ourselves: <b>$2,500 for Los Angeles</b> and <b>$2,500 for Washington, DC</b>.</p>
+    <p>A city is ready when both bars are full: enough dog owners have signed up (our goal is <b>1 in 5 dog owners</b>), and a volunteer team is ready to hand them out. We're aiming for spring 2027, but the meters decide, not a date.</p>
     <div class="cities" id="city-meters" aria-live="polite"><p class="note">Loading the city meters...</p></div>
     <p class="note" id="city-updated"></p>
     <p>Not in LA or DC? Reserve anyway and tell us your city. Every city with enough sign-ups gets its own meters.</p>
@@ -280,7 +279,7 @@
     <h2>How this will work</h2>
     <ol class="steps-list">
       <li><b>You reserve a set</b> for your city. It's free.</li>
-      <li><b>Your city's meters fill up:</b> dog owners, money and volunteers.</li>
+      <li><b>Your city's meters fill up:</b> dog owners and volunteers.</li>
       <li><b>We make every set</b> for that city and pack each one sealed and labelled with its owner's name.</li>
       <li><b>We ship one big box</b> to a public spot, like Santa Monica beach for Los Angeles, and you can follow it here.</li>
       <li><b>Drop day:</b> everyone picks up their set together, and the whole city sees the colours at once.</li>
@@ -425,7 +424,7 @@
         <p>If you're part of a dog park group, rescue, club or online community that would love this, tell us. It helps us choose the next cities and find drop-day volunteers.</p>
       </div>
     </div>
-    <form class="card" style="margin-top:14px" data-send="ilovedogs.dog: community lead" data-ok="Thank you! We've saved it for the next wave.">
+    <form class="card" id="community-form" style="margin-top:14px" data-send="ilovedogs.dog: community lead" data-ok="Thank you! We've saved it for the next wave.">
       <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
       <div class="row two">
         <div><label for="l-what">Community name</label><input id="l-what" name="community" required></div>
@@ -454,20 +453,19 @@
       <div class="card" id="partners">
         <h2>Partners</h2>
         <p><b>Leash partner:</b> coming soon.</p>
-        <p>We'd love to work with rescues, leash makers, trainers and dog parks who want to help spread the signal. <a href="#" data-open-gate>Say hello</a>.</p>
+        <p>We'd love to work with rescues, leash makers, trainers and dog parks who want to help spread the signal. <a href="#community-form">Say hello</a>.</p>
       </div>
     </div>
   </div>
 </section>
 </main>
 <script src="/js/sizer.js?v=1"></script>
-<script src="/js/cities.js?v=2"></script>
+<script src="/js/cities.js?v=3"></script>
 
 <footer>
   <div class="wrap">
     <p><b>ilovedogs.dog</b> is run by a very small team who wants to do good things for humanity. No ads, ever.</p>
-    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Cities</a> · <a href="/food.html">Food</a> · <a href="/sick-dogs.html">Sick dogs</a> · <a href="/good-owners.html">Good owners</a> · <a href="/#volunteer">Volunteer</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://elevat.ing/">Our other sites</a></p>
-    <p data-hmr-tier-ribbon>Part of the <a href="https://elevat.ing/">elevat.ing family</a> of websites. Always 100% free.</p>
+    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Cities</a> · <a href="/food.html">Food</a> · <a href="/sick-dogs.html">Sick dogs</a> · <a href="/good-owners.html">Good owners</a> · <a href="/#volunteer">Volunteer</a> · <a href="#community-form">Say hello</a> · <a href="https://elevat.ing/">Our other sites</a></p>
   </div>
 </footer>
 <script src="/js/site.js?v=4"></script>

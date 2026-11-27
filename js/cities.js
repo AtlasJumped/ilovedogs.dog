@@ -1,4 +1,4 @@
-/* City meters: three bars per city (owners, money, volunteers). Goals, notes and money are in /data/cities.json.
+/* City meters: two bars per city (owners, volunteers). Goals and notes are in /data/cities.json.
    Owners and volunteers add the live counts from the HMR Family database (dog_counts(), see js/site.js). */
 (function () {
   var box = document.getElementById('city-meters'); if (!box || !window.fetch) return;
@@ -17,15 +17,14 @@
     d.cities.forEach(function (c) { var x = L[c.id]; if (x) { c.owners += +x.owners || 0; c.volunteers += +x.volunteers || 0; } });
     var html = '';
     d.cities.forEach(function (c) {
-      var ready = c.owners >= c.owners_goal && c.money >= c.money_goal && c.volunteers >= c.volunteers_goal;
+      var ready = c.owners >= c.owners_goal && c.volunteers >= c.volunteers_goal;
       html += '<div class="card city"><div class="city-h"><h3>' + c.name + '</h3><span class="st ' + (ready ? 'lead' : 'maybe') + '">' + (ready ? 'Ready to drop' : 'Filling up') + '</span></div>' +
         '<p class="note" style="margin-top:0">Hand-out spot: ' + c.drop + '</p>' +
         bar('Dog owners signed up', c.owners, c.owners_goal, n, c.owners_note) +
-        bar('Money for this city', c.money, c.money_goal, function (x) { return '$' + n(x); }, c.money_note) +
         bar('Volunteers ready', c.volunteers, c.volunteers_goal, n, 'Hand-out, crowd care, entertainment and setup.') + '</div>';
     });
     box.innerHTML = html;
-    var u = document.getElementById('city-updated'); if (u) u.textContent = ok ? 'Sign-ups and volunteers count live. Money updated ' + d.updated + '.' : 'Updated ' + d.updated + '.';
+    var u = document.getElementById('city-updated'); if (u) u.textContent = ok ? 'Sign-ups and volunteers count live. Goals updated ' + d.updated + '.' : 'Updated ' + d.updated + '.';
   }).catch(function () { }); }
   load(); window.addEventListener('ild-counts', load);
 })();

@@ -2,20 +2,24 @@
   "updated": "November 26, 2026",
   "cities": [
     {
-      "id": "la", "name": "Los Angeles", "drop": "Santa Monica beach (planned)",
-      "owners": 0, "owners_goal": 115416,
+      "id": "la",
+      "name": "Los Angeles",
+      "drop": "Santa Monica beach (planned)",
+      "owners": 0,
+      "owners_goal": 115416,
       "owners_note": "1 in 5 of about 577,000 dog-owning households in the city",
-      "money": 2500, "money_goal": 139000,
-      "money_note": "$2,500 from us so far. Goal is about $1.20 a set.",
-      "volunteers": 0, "volunteers_goal": 25
+      "volunteers": 0,
+      "volunteers_goal": 25
     },
     {
-      "id": "dc", "name": "Washington, DC", "drop": "Spot to be announced",
-      "owners": 0, "owners_goal": 22000,
+      "id": "dc",
+      "name": "Washington, DC",
+      "drop": "Spot to be announced",
+      "owners": 0,
+      "owners_goal": 22000,
       "owners_note": "1 in 5 of DC's dog owners. DC doesn't publish a count, so this is our estimate (14,000 to 30,000).",
-      "money": 2500, "money_goal": 26400,
-      "money_note": "$2,500 from us so far. Goal is about $1.20 a set.",
-      "volunteers": 0, "volunteers_goal": 25
+      "volunteers": 0,
+      "volunteers_goal": 25
     }
   ]
 }
