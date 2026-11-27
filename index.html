@@ -18,7 +18,7 @@
 <div class="wrap">
 <nav class="top" aria-label="Main">
   <a class="logo" href="/">ilovedogs<span>.dog</span></a>
-  <div class="links"><a href="/#signals">Colour code</a><a href="/#free-sets">Cities</a><a href="/#volunteer">Volunteer</a><a href="/donate.html">Donate</a></div>
+  <div class="links"><a href="/#signals">Colour code</a><a href="/#free-sets">Cities</a><a href="/food.html">Food</a><a href="/sick-dogs.html">Sick dogs</a><a href="/good-owners.html">Good owners</a><a href="/#volunteer">Volunteer</a></div>
 </nav>
 </div>
 
@@ -79,7 +79,7 @@
     <div class="card">
       <p class="eyebrow">The movement</p>
       <h2>This isn't about a brand. It's about a code everyone knows.</h2>
-      <p>We don't need everyone to buy our collars, or to donate forever. We want to drop a bomb of positivity on how people and dogs meet: one simple colour code that every dog lover understands.</p>
+      <p>We don't need everyone to buy our collars forever. We want to drop a bomb of positivity on how people and dogs meet: one simple colour code that every dog lover understands.</p>
       <p>It takes two halves to work. Owners give the signal, and everyone around them has to know what it means. So the message matters as much as the collar.</p>
       <ol class="steps-list">
         <li><b>Unaware:</b> today, most people have never heard of a colour code for dogs.</li>
@@ -235,7 +235,7 @@
     <h2>Reserve a free set for your city</h2>
     <p>We don't mail sets one at a time. If one dog wore a green collar and nobody else did, nobody would know what it means, and that owner would give up. So we wait until a whole city is ready, then everyone gets their set on the same day.</p>
     <p>A city is ready when all three bars are full: enough dog owners have signed up (our goal is <b>1 in 5 dog owners</b>), there's enough money to make every set, and a volunteer team is ready to hand them out. We're aiming for spring 2027, but the meters decide, not a date.</p>
-    <p>We're putting in the first <b>$5,000</b> ourselves: <b>$2,500 for Los Angeles</b> and <b>$2,500 for Washington, DC</b>. Every donation after that goes to more sets, shipping and getting the word out, in the city the donor picks.</p>
+    <p>We're putting in the first <b>$5,000</b> ourselves: <b>$2,500 for Los Angeles</b> and <b>$2,500 for Washington, DC</b>.</p>
     <div class="cities" id="city-meters" aria-live="polite"><p class="note">Loading the city meters...</p></div>
     <p class="note" id="city-updated"></p>
     <p>Not in LA or DC? Reserve anyway and tell us your city. Every city with enough sign-ups gets its own meters.</p>
@@ -344,21 +344,79 @@
   </div>
 </section>
 
-<section id="vision">
+<section id="more">
   <div class="wrap">
-    <h2>The vision</h2>
-    <div class="video" role="img" aria-label="Video coming soon">Video coming soon: the founder on why this matters, and watching the city meters climb until the first box ships.</div>
+    <h2>More we want to do for dogs</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3><a href="/food.html">Feed dogs well</a></h3>
+        <p>Why we believe fresh food beats kibble, an open source of recipes, and a plan to rescue the good food stores throw away.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/sick-dogs.html">When your dog is sick</a></h3>
+        <p>What blogs say, what the evidence says, what we think, and where to check us. Never a stand-in for your vet.</p>
+      </div>
+      <div class="card">
+        <h3>Foster, walk, and find your people</h3>
+        <p>Fostering a dog, walking a neighbour's dog, and dog communities near you. We want to help connect people who want to help with the dogs who need it.</p>
+      </div>
+      <div class="card" id="parks">
+        <h3>An open question: parks and wildlife</h3>
+        <p>Many parks keep dogs out to protect wildlife. Some of those reasons are real, and some may not be. We want to look at the evidence park by park, and push for access where it is safe. <a href="/good-owners.html">Good owners</a> make that case for us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dogs-everywhere">
+  <div class="wrap">
+    <div class="card">
+      <h2>Dogs everywhere</h2>
+      <p>We would love to see a "dogs welcome" certification for places that want dogs: cafes, shops, offices, and especially beaches. A place earns it, shows it, and dog owners know they are wanted.</p>
+      <p>We know not everyone loves dogs as much as we do. That's why access comes with <a href="/good-owners.html">being a good owner</a>, and why places stay free to say no.</p>
+      <form data-send="ilovedogs.dog: dogs everywhere vote" data-ok="Thank you! We've counted your vote.">
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+        <fieldset style="border:0;padding:0;margin:12px 0 0">
+          <legend>Should more beaches welcome dogs?</legend>
+          <div class="btn-row">
+            <label class="btn ghost"><input type="radio" name="beaches" value="thumbs up" required> Thumbs up</label>
+            <label class="btn ghost"><input type="radio" name="beaches" value="thumbs down"> Thumbs down</label>
+          </div>
+        </fieldset>
+        <div style="margin-top:12px"><label for="de-place">A place that should welcome dogs (optional)</label><input id="de-place" name="place"></div>
+        <button class="btn" type="submit" style="margin-top:12px">Send my vote</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="dog-domains">
+  <div class="wrap">
+    <div class="card">
+      <h2>A dog domain for your community</h2>
+      <p>We hold a few dog web addresses. We will never sell them. A community can earn one free by volunteering with us.</p>
+      <label for="dd">Addresses we hold</label>
+      <select id="dd">
+        <option>ilovedogs.art</option>
+        <option>ilovedogs.cloud</option>
+        <option>ilovedogs.live</option>
+        <option>ilovedogs.space</option>
+        <option>ilovedogs.tech</option>
+      </select>
+      <p class="note">Interested? <a href="/#volunteer">Tell us on the volunteer form</a> which one and what your community does.</p>
+    </div>
   </div>
 </section>
 
 <section id="help">
   <div class="wrap">
     <h2>Help make it work</h2>
-    <p>Right now this is one person covering the first $5,000. Here's how you can help it spread:</p>
+    <p>Here's how you can help it spread:</p>
     <div class="grid two">
       <div class="card">
         <h3>1. Share it</h3>
-        <p>Send this site to your dog friends and encourage them to get their own free set. Sharing the <a href="/donate.html">donate page</a> helps too, and donors can choose the city their money goes to.</p>
+        <p>Send this site to your dog friends and encourage them to get their own free set.</p>
         <div class="btn-row"><button class="btn" type="button" id="share-btn">Share this site</button></div>
         <p class="status" id="share-st" role="status" aria-live="polite"></p>
       </div>
@@ -392,7 +450,6 @@
       <div class="card">
         <h2>Who we are</h2>
         <p>We're a very small team of dog lovers. Everyone on the team works a full-time job, and we fund this ourselves.</p>
-        <p><a href="/donate.html">How you can help keep it free</a></p>
       </div>
       <div class="card" id="partners">
         <h2>Partners</h2>
@@ -409,8 +466,8 @@
 <footer>
   <div class="wrap">
     <p><b>ilovedogs.dog</b> is run by a very small team who wants to do good things for humanity. No ads, ever.</p>
-    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Cities</a> · <a href="/#volunteer">Volunteer</a> · <a href="/donate.html">Donate</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://hmrfamily.life/">Our other sites</a></p>
-    <p data-hmr-tier-ribbon>Part of the <a href="https://hmrfamily.life/">HMR family</a> of websites. Always 100% free.</p>
+    <p><a href="/">Home</a> · <a href="/#signals">Colour code</a> · <a href="/#free-sets">Cities</a> · <a href="/food.html">Food</a> · <a href="/sick-dogs.html">Sick dogs</a> · <a href="/good-owners.html">Good owners</a> · <a href="/#volunteer">Volunteer</a> · <a href="#" data-open-gate>Say hello</a> · <a href="https://elevat.ing/">Our other sites</a></p>
+    <p data-hmr-tier-ribbon>Part of the <a href="https://elevat.ing/">elevat.ing family</a> of websites. Always 100% free.</p>
   </div>
 </footer>
 <script src="/js/site.js?v=4"></script>
